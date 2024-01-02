@@ -1,0 +1,87 @@
+.home {
+  height: calc(100vh - 60px);
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.maintext {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: aliceblue;
+  text-align: center;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.doodle {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.doodle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.304),
+    rgba(0, 0, 255, 0.324)
+  );
+}
+
+.doodle img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-exp {
+  font-size: 16px;
+  position: absolute;
+  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 2s ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  .maintext {
+    top: 50%;
+  }
+
+  .btn-exp {
+    margin-top: 450px !important;
+  }
+  .btn-exp:hover {
+    background: linear-gradient(45deg, rgba(245, 245, 164, 0.874), pink);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn-exp {
+    margin-top: 150px;
+  }
+}

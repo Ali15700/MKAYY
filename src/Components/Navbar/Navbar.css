@@ -1,0 +1,28 @@
+.container {
+  max-width: 100%;
+  background: linear-gradient(45deg, rgb(246, 246, 137), pink);
+
+  color: #4d0227;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
